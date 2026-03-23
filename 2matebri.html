@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Las Matrices y sus Aplicaciones</title>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* Reset y fuente */
+*{margin:0; padding:0; box-sizing:border-box; font-family:'Comic Neue', cursive;}
+body{background:#ffe4f0; color:#4b0082; line-height:1.6; scroll-behavior:smooth;}
+h1,h2,h3{color:#ff1493; text-align:center;}
+h1{font-size:3rem; margin:20px 0; animation: bounce 2s infinite;}
+h2{font-size:2rem; margin:30px 0 20px 0;}
+p, li{padding:0 20px;}
+section{padding:20px; margin:20px auto; border-radius:15px; background:#fff0f5; box-shadow:0 0 20px rgba(255,20,147,0.4);}
+nav{background:#ff69b4; padding:15px; text-align:center; position:sticky; top:0; z-index:999;}
+nav a{color:white; margin:0 15px; text-decoration:none; font-weight:bold; transition:0.3s;}
+nav a:hover{color:#ffb6c1; transform:scale(1.1);}
+.btn{background:#ff69b4; color:white; border:none; padding:10px 20px; margin:10px; border-radius:10px; cursor:pointer; transition:0.3s;}
+.btn:hover{background:#ff1493; transform:scale(1.1);}
+.fade{opacity:0; transform:translateY(50px); transition:all 1s ease;}
+.fade.show{opacity:1; transform:translateY(0);}
+.quiz{background:#fff0f5; padding:20px; border-radius:15px; margin-top:20px; box-shadow:0 0 10px rgba(255,20,147,0.3);}
+.quiz p{margin:10px 0;}
+.quiz button{margin-top:5px; cursor:pointer; transition:0.3s;}
+.quiz button:hover{background:#ffb6c1;}
+.calc{background:#ffe4f0; padding:20px; border-radius:15px; box-shadow:0 0 10px rgba(255,20,147,0.3);}
+input[type=number]{width:60px; padding:5px; margin:2px;}
+table{margin:auto; border-collapse:collapse;}
+table, th, td{border:1px solid #ff69b4; text-align:center; padding:10px;}
+.heart{position:absolute; font-size:20px; color:#ff1493; animation:float 5s linear infinite; pointer-events:none;}
+@keyframes float{0%{transform:translateY(0) rotate(0deg);}100%{transform:translateY(-800px) rotate(360deg);}}
+@keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-20px);}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+<a href="#intro">Introducción</a>
+<a href="#tipos">Tipos de Matrices</a>
+<a href="#operaciones">Operaciones</a>
+<a href="#aplicaciones">Aplicaciones</a>
+<a href="#juegos">Juegos</a>
+<a href="#calculadora">Calculadora</a>
+<a href="#conclusion">Conclusión</a>
+</nav>
+
+<!-- Introducción -->
+<section id="intro" class="fade">
+<h1>Las Matrices y sus Aplicaciones</h1>
+<p>Portafolio estudiantil de <strong>Brithany Torres - 1ro Contabilidad</strong></p>
+<p>📊 <strong>¿Qué son las matrices?</strong></p>
+<p>Una matriz es un arreglo de números organizado en filas y columnas.</p>
+<p>Se utilizan para ordenar, representar y trabajar información de forma estructurada, especialmente cuando hay muchos datos.</p>
+<p>👉 Cada número dentro de la matriz se llama elemento</p>
+<p>👉 La posición de cada elemento depende de su fila y columna</p>
+<p>🧠 <strong>¿Para qué sirven las matrices?</strong></p>
+<ul>
+<li>Organizar información numérica</li>
+<li>Resolver problemas matemáticos</li>
+<li>Representar sistemas complejos</li>
+<li>Hacer cálculos más rápidos y ordenados</li>
+</ul>
+</section>
+
+<!-- Aplicaciones -->
+<section id="aplicaciones" class="fade">
+<h2>📌 Aplicaciones de las Matrices</h2>
+<p>🔹 En matemáticas: Resolver sistemas de ecuaciones, trabajar con vectores, realizar operaciones como suma, resta y multiplicación.</p>
+<p>🔹 En informática y programación: Desarrollo de videojuegos (movimientos, rotaciones), manejo de gráficos e imágenes, inteligencia artificial y datos.</p>
+<p>🔹 En economía y negocios: Control de inventarios, análisis de costos y producción, organización de ventas.</p>
+<p>👉 Esto te sirve directamente en tu fábrica: puedes usar matrices para llevar control de pedidos, tallas, colores y cantidades.</p>
+<p>🔹 En ingeniería: Diseño de estructuras, análisis de circuitos eléctricos, modelos matemáticos complejos.</p>
+<p>🔹 En la vida cotidiana: Tablas de datos (como Excel), horarios, registros de información.</p>
+<p>💡 Idea clave: Las matrices no son solo teoría. Son una herramienta para organizar información y resolver problemas reales.</p>
+</section>
+
+<!-- Tipos de Matrices -->
+<section id="tipos" class="fade">
+<h2>📊 Tipos de Matrices</h2>
+<p><strong>Matriz fila:</strong> Una fila y varias columnas. Vector horizontal. Se utiliza para listas de valores.</p>
+<p><strong>Matriz columna:</strong> Una columna y varias filas. Vector vertical. Representa magnitudes con dirección.</p>
+<p><strong>Matriz nula (cero):</strong> Todos sus elementos son 0. Elemento neutro de la suma y multiplicación.</p>
+<p><strong>Matriz cuadrada:</strong> Igual número de filas y columnas. Puede ser invertible, simétrica o triangular.</p>
+</section>
+
+<!-- Operaciones -->
+<section id="operaciones" class="fade">
+<h2>📊 Operaciones con Matrices</h2>
+<p><strong>Multiplicación:</strong> Se multiplica fila por columna. El número de columnas de la primera debe coincidir con las filas de la segunda.</p>
+<p><strong>Suma:</strong> Se suman los elementos correspondientes. Deben tener el mismo tamaño.</p>
+<p><strong>Resta:</strong> Se restan los elementos correspondientes. No es conmutativa.</p>
+<p>⚠️ Errores comunes: No coincidir dimensiones, confundir filas con columnas, intentar multiplicar número por número directamente.</p>
+<p>💡 Consejo: Practicar varios ejercicios para entender completamente.</p>
+</section>
+
+<!-- Juegos -->
+<section id="juegos" class="fade">
+<h2>🎮 Juegos Interactivos</h2>
+<div class="quiz">
+<p>Pregunta: ¿Qué es una matriz nula?</p>
+<button onclick="alert('✅ Correcto: Todos sus elementos son cero')">Todos sus elementos son cero</button>
+<button onclick="alert('❌ Incorrecto')">Tiene solo una fila</button>
+<button onclick="alert('❌ Incorrecto')">Tiene varias columnas</button>
+</div>
+<div class="quiz">
+<p>Pregunta: ¿Se puede multiplicar cualquier matriz?</p>
+<button onclick="alert('❌ Incorrecto')">Sí, siempre</button>
+<button onclick="alert('✅ Correcto')">No, deben coincidir dimensiones</button>
+</div>
+</section>
+
+<!-- Calculadora -->
+<section id="calculadora" class="fade">
+<h2>🧮 Calculadora de Matrices</h2>
+<div class="calc">
+<p>Multiplica 2x2 matrices:</p>
+<input type="number" id="a11" placeholder="a11">
+<input type="number" id="a12" placeholder="a12"><br>
+<input type="number" id="a21" placeholder="a21">
+<input type="number" id="a22" placeholder="a22"><br><br>
+<input type="number" id="b11" placeholder="b11">
+<input type="number" id="b12" placeholder="b12"><br>
+<input type="number" id="b21" placeholder="b21">
+<input type="number" id="b22" placeholder="b22"><br><br>
+<button class="btn" onclick="multiplicarMatrices()">Multiplicar</button>
+<button class="btn" onclick="sumarMatrices()">Sumar</button>
+<button class="btn" onclick="restarMatrices()">Restar</button>
+<p id="resultado"></p>
+</div>
+</section>
+
+<!-- Conclusión -->
+<section id="conclusion" class="fade">
+<h2>📝 Conclusión</h2>
+<p>Este portafolio demuestra la importancia de las matrices en matemáticas, informática, ingeniería y vida cotidiana.</p>
+<p>Dominar las operaciones y aplicaciones de las matrices permite organizar información, resolver problemas complejos y aplicar soluciones reales.</p>
+<p>💖 Con este conocimiento, Brithany Torres - 1ro Contabilidad, puede implementar matrices de forma práctica y profesional.</p>
+</section>
+
+<script>
+// Animación fade al scroll
+const faders=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+    faders.forEach(el=>{
+        const top=el.getBoundingClientRect().top;
+        const height=window.innerHeight;
+        if(top<height-100){el.classList.add('show');}
+    });
+});
+
+// Corazones flotantes
+function crearCorazon(){
+    const heart=document.createElement('div');
+    heart.classList.add('heart');
+    heart.style.left=Math.random()*window.innerWidth+'px';
+    heart.style.fontSize=(10+Math.random()*20)+'px';
+    heart.innerHTML='💖';
+    document.body.appendChild(heart);
+    setTimeout(()=>{heart.remove()},5000);
+}
+setInterval(crearCorazon,500);
+
+// Calculadora
+function multiplicarMatrices(){
+    let a11=parseFloat(document.getElementById('a11').value)||0;
+    let a12=parseFloat(document.getElementById('a12').value)||0;
+    let a21=parseFloat(document.getElementById('a21').value)||0;
+    let a22=parseFloat(document.getElementById('a22').value)||0;
+    let b11=parseFloat(document.getElementById('b11').value)||0;
+    let b12=parseFloat(document.getElementById('b12').value)||0;
+    let b21=parseFloat(document.getElementById('b21').value)||0;
+    let b22=parseFloat(document.getElementById('b22').value)||0;
+    let r11=a11*b11+a12*b21;
+    let r12=a11*b12+a12*b22;
+    let r21=a21*b11+a22*b21;
+    let r22=a21*b12+a22*b22;
+    document.getElementById('resultado').innerHTML = `<table>
+    <tr><td>${r11}</td><td>${r12}</td></tr>
+    <tr><td>${r21}</td><td>${r22}</td></tr>
+    </table>`;
+}
+function sumarMatrices(){
+    let a11=parseFloat(document.getElementById('a11').value)||0;
+    let a12=parseFloat(document.getElementById('a12').value)||0;
+    let a21=parseFloat(document.getElementById('a21').value)||0;
+    let a22=parseFloat(document.getElementById('a22').value)||0;
+    let b11=parseFloat(document.getElementById('b11').value)||0;
+    let b12=parseFloat(document.getElementById('b12').value)||0;
+    let b21=parseFloat(document.getElementById('b21').value)||0;
+    let b22=parseFloat(document.getElementById('b22').value)||0;
+    let r11=a11+b11;
+    let r12=a12+b12;
+    let r21=a21+b21;
+    let r22=a22+b22;
+    document.getElementById('resultado').innerHTML = `<table>
+    <tr><td>${r11}</td><td>${r12}</td></tr>
+    <tr><td>${r21}</td><td>${r22}</td></tr>
+    </table>`;
+}
+function restarMatrices(){
+    let a11=parseFloat(document.getElementById('a11').value)||0;
+    let a12=parseFloat(document.getElementById('a12').value)||0;
+    let a21=parseFloat(document.getElementById('a21').value)||0;
+    let a22=parseFloat(document.getElementById('a22').value)||0;
+    let b11=parseFloat(document.getElementById('b11').value)||0;
+    let b12=parseFloat(document.getElementById('b12').value)||0;
+    let b21=parseFloat(document.getElementById('b21').value)||0;
+    let b22=parseFloat(document.getElementById('b22').value)||0;
+    let r11=a11-b11;
+    let r12=a12-b12;
+    let r21=a21-b21;
+    let r22=a22-b22;
+    document.getElementById('resultado').innerHTML = `<table>
+    <tr><td>${r11}</td><td>${r12}</td></tr>
+    <tr><td>${r21}</td><td>${r22}</td></tr>
+    </table>`;
+}
+</script>
+</body>
+</html>
